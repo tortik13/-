@@ -8,7 +8,7 @@ class Form(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('main.ui', self)
-        self.con = sqlite3.connect("coffee (1).sqlite")
+        self.con = sqlite3.connect("coffee.sqlite")
         self.cur = self.con.cursor()
         query = 'SELECT * FROM all_coffee'
         result = self.cur.execute(query).fetchall()
